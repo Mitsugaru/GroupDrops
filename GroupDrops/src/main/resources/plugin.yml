@@ -1,0 +1,27 @@
+name: GroupDrops
+main: com.mitsugaru.groupdrops.GroupDrops
+version: 0.01
+description: Drop manager based on groups and permissions
+authors:
+  - Mitsugaru
+softdepend: [Vault]
+commands:
+  gd:
+     description: Root command for GroupDrops
+     usage: /gd <param> - Show help on GroupDrops
+permissions:
+   GroupDrops.*:
+     description: Give access to all Cliques permission nodes
+     children:
+        GroupDrops.admin.reload: true
+        GroupDrops.ignore: true
+   GroupDrops.admin.*:
+     description: Give access to all admin permission nodes
+     children:
+        GroupDrops.admin.reload: true
+   GroupDrops.admin.reload:
+     description: Allow reload command
+     default: op
+   GroupDrops.ignore:
+     description: Ignored by listener.
+     default: op
