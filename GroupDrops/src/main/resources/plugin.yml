@@ -11,7 +11,7 @@ commands:
      usage: /gd <param> - Show help on GroupDrops
 permissions:
    GroupDrops.*:
-     description: Give access to all Cliques permission nodes
+     description: Give access to all GroupDrops permission nodes
      children:
         GroupDrops.admin.reload: true
         GroupDrops.ignore: true
