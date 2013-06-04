@@ -1,7 +1,7 @@
-name: GroupDrops
-main: com.mitsugaru.groupdrops.GroupDrops
-version: 0.01
-description: Drop manager based on groups and permissions
+name: ${project.artifactId}
+description: ${project.description}
+main: ${project.mainclass}
+version: ${project.version}
 authors:
   - Mitsugaru
 softdepend: [Vault]

@@ -16,4 +16,32 @@
 		<version>1.5.2-SNAPSHOT</version>
 	</parent>
 	
+	<!-- Properties -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.mainclass>com.mitsugaru.groupdrops.GroupDrops</project.mainclass>
+    </properties>
+	
+	<!-- Build instructions -->
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <defaultGoal>compile package</defaultGoal>
+        <sourceDirectory>${basedir}/src/</sourceDirectory>
+        <resources>
+            <resource>
+                <includes>
+                    <include>plugin.yml</include>
+                </includes>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <includes>
+                    <include>LICENSE.txt</include>
+                </includes>
+                <directory>${basedir}</directory>
+            </resource>
+        </resources>
+    </build>
+	
 </project>
